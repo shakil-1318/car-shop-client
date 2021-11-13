@@ -1,0 +1,90 @@
+[
+    {
+        "key": 1,
+        "name": "Red luxury sedan",
+        "description": "The term luxury is used to categorize vehicles that are equipped with better performance capabilities, lavish interiors and all the latest safety and technology features.",
+        "price": 1000,
+        "color": "black",
+        "img": "https://image.freepik.com/free-photo/red-luxury-sedan-road_114579-5079.jpg"
+    },
+    {
+        "key": 2,
+        "name": "Blue luxury sedan",
+        "description": "The vehicle must have high-end features that go above and beyond the average necessities. The term luxury is used to categorize vehicles that are equipped with better performance capabilities, lavish interiors and all the latest safety and technology features.",
+        "price": 1200,
+        "color": "Blue",
+        "img": "https://image.freepik.com/free-photo/blue-sport-sedan-parked-yard_114579-5078.jpg"
+    },
+    {
+        "key": 4,
+        "name": "White luxury sedan",
+        "description": "The vehicle must have high-end features that go above and beyond the average necessities. The term luxury is used to categorize vehicles that are equipped with better performance capabilities, lavish interiors and all the latest safety and technology features.",
+        "price": 900,
+        "color": "White",
+        "img": "https://image.freepik.com/free-vector/white-sedan-car-isolated-white-vector_53876-67413.jpg"
+    },
+    {
+        "key": 5,
+        "name": "Yellow sport car",
+        "description": "The link between intelligence and yellow means drivers of yellow cars are likely to be observant and careful on the road. They are likely to be the first ones to stop, if another road user requires help due to their need to comfort others.",
+        "price": 1500,
+        "color": "Yellow",
+        "img": "https://image.freepik.com/free-photo/yellow-sport-car-with-black-autotuning-road_114579-5051.jpg"
+    },
+    {
+        "key": 6,
+        "name": "White hatchback car",
+        "description": "Which Colour is best for hatchback car? Non-metallic light colours are preferred over darker shades. Light coloured vehicles are better noticed on road from distance during both day and night times. White is best, followed by yellow and orange",
+        "price": 1500,
+        "color": "White",
+        "img": "https://image.freepik.com/free-vector/white-hatchback-car-isolated-white-vector_53876-64418.jpg"
+    },
+    {
+        "key": 7,
+        "name": "Silver color mini coupe",
+        "description": "Which Colour is best for hatchback car? Non-metallic light colours are preferred over darker shades. Light coloured vehicles are better noticed on road from distance during both day and night times. White is best, followed by yellow and orange",
+        "price": 1500,
+        "color": "Silver",
+        "img": "https://image.freepik.com/free-photo/silver-color-mini-coupe-road-drive-sunlight_114579-5050.jpg"
+    },
+    {
+        "key": 8,
+        "name": "Avalon Car",
+        "description": "This Toyota car boasts breathtaking performance with its available Adaptive Variable Suspension (AVS) and 301-hp, 3.5-liter V6 engine. Expect Toyota Safety Sense P (TSS-P)143 standard for the ultimate peace of mind.",
+        "price": 1500,
+        "color": "Silver",
+        "img": "https://image.freepik.com/free-photo/beautiful-car_181624-36788.jpg"
+    },
+    {
+        "key": 9,
+        "name": "Camry Car",
+        "description": "Get noticed in this Toyota car known for its strikingly elegant exterior design. Plus, pair your compatible iPhone®101 with newly integrated Toyota car Apple",
+        "price": 2000,
+        "color": "Blue",
+        "img": "https://www.toyota.com/imgix/content/dam/toyota/jellies/relative/2022/camry/base.png?bg=fff&fm=webp&q=90&w=768"
+    },
+    {
+        "key": 10,
+        "name": "Corolla Hatchback",
+        "description": "Put the “fun” in function with this Toyota car featuring an all-new suspension, Dynamic Shift-CVT with paddle shifters, and our suite of advanced safety features",
+        "price": 2000,
+        "color": "Blue",
+        "img": "https://www.toyota.com/imgix/content/dam/toyota/jellies/relative/2022/corollahatchback/base.png?bg=fff&fm=webp&q=90&w=768"
+    },
+    {
+        "key": 11,
+        "name": "GR Supra",
+        "description": "This Toyota car isn't just sporty. It's an engineering work of art. Enjoy your drive with leather-trimmed sport seats and 19-in. forged aluminum twin-spoke wheels on the 3.0 variant",
+        "price": 2900,
+        "color": "Blue",
+        "img": "https://www.toyota.com/imgix/content/dam/toyota/jellies/relative/2022/grsupra/base.png?bg=fff&fm=webp&q=90&w=768"
+    },
+    {
+        "key": 12,
+        "name": "Prius Prime",
+        "description": "Turn plenty of heads in one of our most eco-sensitive Toyota car models to date. Plug this Toyota car in at home144 to enjoy hybrid energy with no special charging equipment.",
+        "price": 4000,
+        "color": "Blue",
+        "img": "https://www.toyota.com/imgix/content/dam/toyota/jellies/relative/2022/priusprime/base.png?bg=fff&fm=webp&q=90&w=768"
+    }
+]
