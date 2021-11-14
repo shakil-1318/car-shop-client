@@ -36,6 +36,27 @@ const ManageAllOrders = () => {
         alert('approved successfully');
     };
 
+    // handle delete
+    const handleDelete = (id) => {
+        const procceed = window.confirm('are you sure want to delete?');
+
+        if (procceed) {
+            fetch(`http://localhost:5000/delete/${id}`, {
+                method: "DELETE",
+            })
+                .then(res => res.json())
+                .then(data => {
+
+                    if (data.deletedCount) {
+                        alert('Delete')
+                        const remaining = services.filter(service => service._id !== id)
+                        setServices(remaining)
+                    }
+                })
+        }
+
+    }
+
     return (
         <>
             {services.length === 0 ?
@@ -72,6 +93,7 @@ const ManageAllOrders = () => {
                                         variant="outlined" />
                                     <CardActions>
                                         <Button style={{ margin: '0 auto' }} onClick={() => handleUpdate(service._id)} variant='contained'>Update</Button>
+                                        <Button sx={{ bgcolor: 'error.main' }} style={{ margin: '0 auto' }} onClick={() => handleDelete(service._id)} variant='contained'>Delete</Button>
                                     </CardActions>
 
                                 </Card>

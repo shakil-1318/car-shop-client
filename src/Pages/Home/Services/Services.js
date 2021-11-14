@@ -28,7 +28,7 @@ const services = [
 const Services = () => {
     return (
         <Container sx={{ flexGrow: 1, mt: 8, mb: 8 }}>
-            <Typography variant='h5'>
+            <Typography variant='h5' sx={{ m: 3 }}>
                 SERVICES CATEGORIES
             </Typography>
             <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>

@@ -25,7 +25,9 @@ const Navigation = () => {
     const useStyle = makeStyles({
         navItem: {
             color: 'white',
-            textDecoration: 'none'
+            textDecoration: 'none',
+            marginRight: '15px'
+
         },
         navIcon: {
             [theme.breakpoints.up('sm')]: {
@@ -56,6 +58,8 @@ const Navigation = () => {
                 <ListItem button>
                     <ListItemText>
                         <Link style={{ color: 'black', textDecoration: 'none', display: 'block' }} to='/home'>Home</Link>
+                        <Divider></Divider>
+                        <Link style={{ color: 'black', textDecoration: 'none', display: 'block' }} to='/allservices'>All Service</Link>
                         <Divider></Divider>
                         {
 
@@ -104,6 +108,7 @@ const Navigation = () => {
                         </Typography>
                         <Box className={navItemContainer}>
                             <Link className={navItem} to='/home'>Home</Link>
+                            <Link className={navItem} to='/allServices'>All Service</Link>
 
                             {
                                 user?.email ?
@@ -111,9 +116,8 @@ const Navigation = () => {
                                         <Link style={{ textDecoration: 'none', color: 'white', marginLeft: '10px' }} to='/dashboard'> <Button color="inherit">Dashboard</Button></Link>
                                         <Button onClick={logOut} color="inherit">LogOut</Button>
                                     </>
-
                                     :
-                                    <Link style={{ textDecoration: 'none', color: 'white', marginLeft: '10px' }} to='/login'> <Button color="inherit">Login</Button></Link>
+                                    <Link className={navItem} to='/login'> Login</Link>
                             }
                             {
                                 user?.email && <Button variant="contained">{user?.displayName}</Button>

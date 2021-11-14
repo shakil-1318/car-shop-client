@@ -46,11 +46,16 @@ const MyOrder = () => {
     return (
         <>
             {services.length === 0 ?
-                <CircularProgress color="success" />
+                <>
+                    <Typography variant='h5'>
+                        You Have No order
+                    </Typography>
+                    {/* <CircularProgress color="success" /> */}
+                </>
                 :
                 <Container sx={{ flexGrow: 1 }}>
                     <Typography variant='h4' sx={{ m: 5 }}>
-                        My All Order
+                        My All Order:{services.length}
                     </Typography>
                     <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                         {services.map((service) => (
@@ -76,7 +81,7 @@ const MyOrder = () => {
                                     <TextField disabled id="outlined-basic" defaultValue={service?.status} variant="outlined" />
 
                                     <CardActions>
-                                        <Button onClick={() => handleDelete(service?._id)} variant='contained'>Delete</Button>
+                                        <Button sx={{ bgcolor: 'error.main' }} style={{ margin: '0 auto' }} onClick={() => handleDelete(service?._id)} variant='contained'>Delete</Button>
                                     </CardActions>
                                 </Card>
                             </Grid>

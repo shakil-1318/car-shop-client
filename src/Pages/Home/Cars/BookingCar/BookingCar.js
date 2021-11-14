@@ -33,7 +33,7 @@ const BookingCar = () => {
         data.email = email;
         data.status = 'pending';
 
-        axios.post('http://localhost:5000/confirmOrder', data)
+        axios.post('http://localhost:5000/confirmOrder', data);
         reset();
 
     }
@@ -72,14 +72,14 @@ const BookingCar = () => {
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <form onSubmit={handleSubmit(onSubmit)}>
-                            {
-                                service && <input
-                                    {...register("name")}
-                                    defaultValue={service?.name}
-                                    className="p-2 m-2 w-100"
-                                    style={{ width: '75%', padding: '10px', marginTop: '10px' }}
-                                />
-                            }
+
+                            <input
+                                {...register("name")}
+                                defaultValue={service?.name}
+                                className="p-2 m-2 w-100"
+                                style={{ width: '75%', padding: '10px', marginTop: '10px' }}
+                            />
+
                             <br />
 
                             <input

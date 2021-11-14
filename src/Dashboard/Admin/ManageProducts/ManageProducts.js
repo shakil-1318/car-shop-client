@@ -70,7 +70,7 @@ const ManageProducts = () => {
                                     </CardContent>
                                     <CardActions>
 
-                                        <Button style={{ margin: '0 auto' }} onClick={() => handleDelete(service?._id)} variant='contained'>Delete</Button>
+                                        <Button sx={{ bgcolor: 'error.main' }} style={{ margin: '0 auto' }} onClick={() => handleDelete(service?._id)} variant='contained'>Delete</Button>
                                     </CardActions>
                                 </Card>
                             </Grid>

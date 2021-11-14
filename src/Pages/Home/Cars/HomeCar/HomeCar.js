@@ -25,7 +25,7 @@ const HomeCar = () => {
             {services.length === 0 ?
                 <CircularProgress color="success" />
                 :
-                <Container sx={{ flexGrow: 1, mb: 8 }}>
+                <Container sx={{ flexGrow: 1, mb: 5 }}>
                     <Typography variant='h4' sx={{ m: 5 }}>
                         EXPLORE OUR SERVICES
                     </Typography>

@@ -32,6 +32,7 @@ import useAuth from '../../hooks/useAuth'
 import MyOrder from '../User/MyOrder/MyOrder';
 import PayOption from '../User/PayOption/PayOption';
 import UserReview from '../User/UserReview/UserReview';
+import { makeStyles } from '@mui/styles';
 
 const drawerWidth = 240;
 
@@ -46,40 +47,58 @@ function Dashboard(props) {
         setMobileOpen(!mobileOpen);
     };
 
+    // style navlink
+    const useStyle = makeStyles({
+        navItem: {
+            display: 'block',
+            textDecoration: 'none',
+            textAlign: 'left'
+
+        },
+        fasHome: {
+            marginRight: '30px'
+        },
+        fasDashboard: {
+            marginRight: '10px'
+        },
+        fasCart: {
+            marginRight: '10px'
+        }
+    })
+    const { navItem, fasHome, fasDashboard, fasCart } = useStyle();
+
     const drawer = (
         <div>
             <Toolbar />
             <Divider />
-            <NavLink to='/home'><Button color='inherit'>Home</Button></NavLink>
-            <NavLink style={{ display: 'block' }} to={`${url}`}><Button color='inherit'>Dashboard</Button></NavLink>
+            <NavLink className={navItem} to='/home'><Button color='inherit'><span className={fasHome}><i class="fas fa-home"></i></span> Home</Button></NavLink>
+            <Divider />
+            <NavLink className={navItem} to={`${url}`}><Button color='inherit'><span className={fasDashboard}><i class="fas fa-chart-line"></i></span>Dashboard</Button></NavLink>
+            <Divider />
             {
                 admin ? <Box>
-                    <NavLink style={{ display: 'block' }} to={`${url}/manageAllOrders`}><Button color='inherit'>Manage All Orders</Button></NavLink>
-                    <NavLink style={{ display: 'block' }} to={`${url}/manageProducts`}><Button color='inherit'>Manage Products</Button></NavLink>
-                    <NavLink style={{ display: 'block' }} to={`${url}/addProduct`}><Button color='inherit'>Add Product</Button></NavLink>
-                    <NavLink style={{ display: 'block' }} to={`${url}/makeAdmin`}><Button color='inherit'>Make Admin</Button></NavLink>
+                    <NavLink className={navItem} to={`${url}/manageAllOrders`}><Button color='inherit'><span className={fasCart}><i class="fas fa-cart-plus"></i></span>Manage All Orders</Button></NavLink>
+                    <Divider />
+                    <NavLink className={navItem} to={`${url}/manageProducts`}><Button color='inherit'><span className={fasCart}><i class="fab fa-product-hunt"></i></span>Manage Products</Button></NavLink>
+                    <Divider />
+                    <NavLink className={navItem} to={`${url}/addProduct`}><Button color='inherit'><span className={fasCart}><i class="fas fa-cart-plus"></i></span>Add Product</Button></NavLink>
+                    <Divider />
+                    <NavLink className={navItem} to={`${url}/makeAdmin`}><Button color='inherit'><span className={fasCart}><i class="fas fa-user-shield"></i></span>Make Admin</Button></NavLink>
+                    <Divider />
                 </Box>
                     :
                     <Box>
-                        <NavLink style={{ display: 'block' }} to={`${url}/myOrder`}><Button color='inherit'>My Order</Button></NavLink>
-                        <NavLink style={{ display: 'block' }} to={`${url}/reviewOption`}><Button color='inherit'>Review</Button></NavLink>
-                        <NavLink style={{ display: 'block' }} to={`${url}/payOption`}><Button color='inherit'>Pay</Button></NavLink>
+                        <NavLink className={navItem} to={`${url}/myOrder`}><Button color='inherit'><span className={fasCart}><i class="fas fa-cart-plus"></i></span>My Order</Button></NavLink>
+                        <Divider />
+                        <NavLink className={navItem} to={`${url}/reviewOption`}><Button color='inherit'><span className={fasCart}><i class="far fa-file-pdf"></i></span>Review</Button></NavLink>
+                        <Divider />
+                        <NavLink className={navItem} to={`${url}/payOption`}><Button color='inherit'><span className={fasCart}><i class="fab fa-cc-amazon-pay"></i></span>Pay</Button></NavLink>
+                        <Divider />
                     </Box>
+
             }
-            <Button onClick={logOut} color='inherit'>LogOut</Button>
+            <Button onClick={logOut} color='inherit'><span><i class="fas fa-sign-out-alt"></i></span> LogOut</Button>
 
-
-
-            <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>
-                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                        </ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
         </div>
     );
 
