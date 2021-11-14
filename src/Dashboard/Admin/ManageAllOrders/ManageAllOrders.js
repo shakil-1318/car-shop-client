@@ -20,14 +20,14 @@ const ManageAllOrders = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/allOrders')
+        fetch('https://secure-fortress-47918.herokuapp.com/allOrders')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
 
     // handleApproved
     const handleUpdate = (id) => {
-        fetch(`http://localhost:5000/updateStatus/${id}`, {
+        fetch(`https://secure-fortress-47918.herokuapp.com/updateStatus/${id}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ status }),
@@ -41,7 +41,7 @@ const ManageAllOrders = () => {
         const procceed = window.confirm('are you sure want to delete?');
 
         if (procceed) {
-            fetch(`http://localhost:5000/delete/${id}`, {
+            fetch(`https://secure-fortress-47918.herokuapp.com/delete/${id}`, {
                 method: "DELETE",
             })
                 .then(res => res.json())

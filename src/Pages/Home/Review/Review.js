@@ -11,7 +11,7 @@ const Review = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/clientReview')
+        fetch('https://secure-fortress-47918.herokuapp.com/clientReview')
             .then(res => res.json())
             .then(data => {
                 setReviews(data)

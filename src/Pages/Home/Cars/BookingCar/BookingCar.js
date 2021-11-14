@@ -20,7 +20,7 @@ const BookingCar = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleService/${serviceId}`)
+        fetch(`https://secure-fortress-47918.herokuapp.com/singleService/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [serviceId])
@@ -33,7 +33,7 @@ const BookingCar = () => {
         data.email = email;
         data.status = 'pending';
 
-        axios.post('http://localhost:5000/confirmOrder', data);
+        axios.post('https://secure-fortress-47918.herokuapp.com/confirmOrder', data);
         reset();
 
     }

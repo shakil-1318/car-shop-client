@@ -33,7 +33,7 @@ const UserReview = () => {
         data.email = email;
         const name = user.displayName;
         data.name = name;
-        axios.post('http://localhost:5000/review', data)
+        axios.post('https://secure-fortress-47918.herokuapp.com/review', data)
         reset();
     }
     return (

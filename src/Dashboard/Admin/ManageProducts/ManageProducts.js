@@ -7,7 +7,7 @@ const ManageProducts = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/manageServices')
+        fetch('https://secure-fortress-47918.herokuapp.com/manageServices')
             .then(res => res.json())
             .then(data => {
                 setServices(data)
@@ -20,7 +20,7 @@ const ManageProducts = () => {
         const procceed = window.confirm('are you sure want to delete?');
 
         if (procceed) {
-            fetch(`http://localhost:5000/deleteService/${id}`, {
+            fetch(`https://secure-fortress-47918.herokuapp.com/deleteService/${id}`, {
                 method: "DELETE",
             })
                 .then(res => res.json())
