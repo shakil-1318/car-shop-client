@@ -6,7 +6,8 @@ import './Footer.css'
 
 const bgFooter = {
     backgroundColor: '#2d3e52',
-    color: 'white'
+    color: 'white',
+    marginTop: '100px'
 }
 const emailInput = {
     border: 'none',

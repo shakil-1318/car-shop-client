@@ -10,6 +10,9 @@ import Navigation from '../../../Shared/Navigation/Navigation';
 import { Link } from 'react-router-dom';
 import CircularProgress from '@mui/material/CircularProgress';
 import useAuth from '../../../../hooks/useAuth';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 
 
 const AllCar = () => {
@@ -24,6 +27,12 @@ const AllCar = () => {
                 setServices(data)
             })
     }, [])
+
+
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, [])
+
     return (
         <>
             <Navigation></Navigation>
@@ -38,7 +47,7 @@ const AllCar = () => {
                     {!isLoading && <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                         {services.map((service) => (
                             <Grid item xs={12} md={4} key={service._id}>
-                                <Card sx={{ minWidth: 275, minHeight: 450 }}>
+                                <Card data-aos='zoom-in' sx={{ minWidth: 275, minHeight: 450 }}>
                                     <CardMedia
                                         component="img"
                                         height="140"
