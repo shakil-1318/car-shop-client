@@ -9,6 +9,7 @@ This project was Material UI with [hunter car shop](https://car-shop-4f567.web.a
 * Every user visited this website car and then car explore and buying.
 * This website have a lot of feature.if any user didnot like any order car then he deleted her order.
 * We will ensure every user much comfortable in this website upcoming update.
+* admin dashboard : admin@admin.com pass: 123456
 
 ### Uses language in this website
 
